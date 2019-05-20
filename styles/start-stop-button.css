@@ -1,0 +1,36 @@
+.start-stop-button {
+    height: 40px;
+    min-width: 100px;
+    text-align: center;
+    padding: 0 12px 0 10px;
+    border-radius: 5px;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.start-stop-button.running {
+    background: crimson;
+}
+
+.start-stop-button:disabled {
+    background: #ffc521;
+}
+
+.start-stop-label {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+/* Default components changes */
+div[class^="pad__"][class*="normal__"] {
+    padding: 30px 60px;
+}
+.medium[class^=header__]  {
+    align-items: flex-end !important;
+    padding-bottom: 0 !important;
+}
+.medium[class^=header__] [class^=illustration__] { display: none; }
+.medium[class^=header__] [class^=title__] { display: none; }
+.medium[class^=header__] [class^=description__] { display: none; }
+.medium[class^=header__] [class^=line__] { display: none; }

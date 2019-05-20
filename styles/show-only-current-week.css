@@ -1,0 +1,8 @@
+.show-only-current-week input {
+    margin: 0 5px 10px 0;
+}
+
+.show-only-current-week label {
+    font-weight: bold;
+    color: #7c73e6;
+}

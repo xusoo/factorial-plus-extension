@@ -1,0 +1,8 @@
+{
+    "showonlycurrentweek_checkbox_label": { "message": "Show only current week" },
+    "startstopbutton_start": { "message": "Start" },
+    "startstopbutton_stop": { "message": "Stop" },
+    "startstopbutton_invalid": { "message": "Invalid" },
+    "weektotals_week_total": { "message": "Week total" },
+    "weektotals_month_total": { "message": "Month total" }
+}

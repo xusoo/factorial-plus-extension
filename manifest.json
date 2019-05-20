@@ -1,0 +1,53 @@
+{
+    "manifest_version": 2,
+    "name": "Factorial+",
+    "version": "1.0",
+    "description": "Unofficial extension that aims to add some little useful features to factorialhr.com",
+    "author": "Josep Marí",
+    "default_locale": "en",
+    "icons": {
+        "32": "icons/icon-32.png",
+        "64": "icons/icon-64.png",
+        "128": "icons/icon-128.png",
+        "256": "icons/icon-256.png"
+    },
+    "permissions": [
+        "*://*.factorialhr.com/*",
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.factorialhr.com/*"
+            ],
+            "js": [
+                "lib/moment.min.js",
+                "lib/jquery-3.4.1.min.js",
+                "src/utils/module-utils.js",
+                "src/utils/date-utils.js",
+                "src/module-loader.js",
+                "src/modules/add-calendar-info.js",
+                "src/modules/week-totals.js",
+                "src/modules/start-stop-button.js",
+                "src/modules/show-only-current-week.js"
+            ],
+            "css": [
+                "styles/variables.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "styles/*"
+    ],
+    "background": {
+        "scripts": [
+            "background/tab-listener.js"
+        ]
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{1e062ace-ba50-41f2-b66d-b156b00bb03a}"
+        }
+    }
+}

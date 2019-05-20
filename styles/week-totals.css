@@ -1,0 +1,17 @@
+.week-total-row {
+    background-color: #f8f9fa;
+    color: var(--accent-color);
+}
+
+.month-total-row {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.month-total-row > td, .week-total-row > td {
+    width: 100%;
+    height: 60px;
+    font-weight: bold;
+    padding: 16px;
+    border-bottom: 2px solid var(--accent-color);
+}

@@ -1,0 +1,8 @@
+{
+    "showonlycurrentweek_checkbox_label": { "message": "Mostrar solo la semana actual" },
+    "startstopbutton_start": { "message": "Empezar" },
+    "startstopbutton_stop": { "message": "Parar" },
+    "startstopbutton_invalid": { "message": "Inválido" },
+    "weektotals_week_total": { "message": "Total de la semana" },
+    "weektotals_month_total": { "message": "Total del mes" }
+}
