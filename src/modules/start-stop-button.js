@@ -56,11 +56,15 @@ Extension.Modules.register({
     }
 
     findOpenShifts() {
-        return this.getShifts(this.$todayRow).filter(shift => shift.startInput.val() && !shift.endInput.val());
+        return this.getShifts(this.$todayRow).filter(shift => !this.isEmptyTime(shift.startInput) && this.isEmptyTime(shift.endInput));
     }
 
     findEmptyShifts() {
-        return this.getShifts(this.$todayRow).filter(shift => !shift.startInput.val() && !shift.endInput.val());
+        return this.getShifts(this.$todayRow).filter(shift => this.isEmptyTime(shift.startInput) && this.isEmptyTime(shift.endInput));
+    }
+
+    isEmptyTime($input) {
+        return !$input.val() || $input.val() === '--:--';
     }
 
     getShifts($row) {

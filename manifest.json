@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Factorial+",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Unofficial extension that aims to add some little useful features to factorialhr.com",
     "author": "Josep Marí",
     "default_locale": "en",
