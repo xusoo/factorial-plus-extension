@@ -18,7 +18,7 @@ function selectedMonth() {
 }
 
 function getDayLoggedTime($day) {
-    return parseTime($day.find('td:nth-child(4) > span').text())
+    return parseTime($day.find('td:nth-child(4) span').text())
 }
 
 function isCurrentMonth() {
