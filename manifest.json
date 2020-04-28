@@ -29,7 +29,6 @@
                 "src/module-loader.js",
                 "src/modules/add-calendar-info.js",
                 "src/modules/week-totals.js",
-                "src/modules/start-stop-button.js",
                 "src/modules/show-only-current-week.js"
             ],
             "css": [
