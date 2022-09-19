@@ -6,12 +6,12 @@
 Extension.Modules.register({
     name: 'add-calendar-info',
     paths: [`/attendance/clock-in/`],
-    requiresElement: '[class^="tableContainer__"],[class^="emptyList__"]'
+    requiresElement: 'table'
 }, new class {
 
     load($container) {
         $container.find('tbody > tr').each((i, row) => {
-            const day = $(row).addClass('day').find('[class^=monthDay__]').text().match(/\d+/);
+            const day = $(row).addClass('day').find('span')[0].textContent.match(/(\d+) [a-z]{3}/i)[1]; // 19 Sep
             if (day) {
                 $(row).addClass('day');
                 const moment = selectedMonth().date(day);

@@ -1,7 +1,7 @@
 Extension.Modules.register({
     name: 'show-only-current-week',
     paths: [`/attendance/clock-in/`],
-    requiresElement: '[class^="tableContainer__"],[class^="emptyList__"]',
+    requiresElement: 'table',
     stylesheet: 'styles/show-only-current-week.css'
 }, new class {
 
@@ -11,7 +11,7 @@ Extension.Modules.register({
             return;
         }
 
-        $('.medium[class^=header]').after(`
+        $('.medium').after(`
             <div class="show-only-current-week">
                 <label>
                     <input type="checkbox">

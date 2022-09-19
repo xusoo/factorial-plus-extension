@@ -1,7 +1,7 @@
 Extension.Modules.register({
     name: 'week-totals',
     paths: [`/attendance/clock-in/`],
-    requiresElement: '[class^="tableContainer__"],[class^="emptyList__"]',
+    requiresElement: 'table',
     stylesheet: 'styles/week-totals.css'
 }, new class {
 
@@ -9,7 +9,7 @@ Extension.Modules.register({
         $container.find(`[data-day]:last`).after($(`
             <tr class="month-total-row">
                 <td colspan="3">${chrome.i18n.getMessage('weektotals_month_total')}</td>
-                <td colspan="2" class="month-total"/>
+                <td colspan="3" class="month-total"/>
             </tr>
         `));
 
@@ -17,7 +17,7 @@ Extension.Modules.register({
             $(row).after($(`
                 <tr class="week-total-row" data-week="${row.dataset.week}">
                     <td colspan="3">${chrome.i18n.getMessage('weektotals_week_total')}</td>
-                    <td colspan="2" class="week-total"/>
+                    <td colspan="3" class="week-total"/>
                 </tr>
             `));
         });
